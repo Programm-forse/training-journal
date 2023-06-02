@@ -87,3 +87,41 @@ label {
 legend {
 	display: block;
 }
+
+
+
+/* My custom css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  margin: 0 78px;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.navbar > ul{
+  display: flex;
+   
+}
+
+.logo {
+  font-size: 32px;
+  margin-top: 18px;
+  margin-left: 9px;
+  margin-right: 7px;
+  line-height: 1.5rem;
+  color: black;
+  flex-grow: 3;
+}
+.navbar-list-point{
+  color: black;
+  margin: 24px 43px;
+}
+
