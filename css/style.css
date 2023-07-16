@@ -91,37 +91,96 @@ legend {
 
 
 /* My custom css */
+/* global style variable */
+:root {
+  --calendar-background: linear-gradient(180deg, rgba(170, 72, 205, 0.572) 37.24%, rgba(72, 158, 205, 0) 102.87%);;
+}
 
+
+
+
+@font-face {
+  font-family: "JetBrainsMonoRegular";
+  src: url("../fonts/JetBrainsMono-2.304/fonts/ttf/JetBrainsMono-Regular.ttf");
+}
+
+@font-face {
+  font-family: "JetBrainsMonoBold";
+  src: url("../fonts/JetBrainsMono-2.304/fonts/ttf/JetBrainsMono-Bold.ttf");
+}
+body {
+  color: #000;
+  font-family: "JetBrainsMonoRegular", sans-serif;
+}
 .container {
   display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 1283px;
   flex-direction: column;
-  font-size: 20px;
-  margin: 0 78px;
-  height: 100%;
+  background: var(--calendar-background);
+
 }
 
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-
 }
-.navbar > ul{
-  display: flex;
-   
+.main-logo, .navbar-list-point{
+  color: inherit;
 }
-
-.logo {
+.logo > .main-logo {
+  font-family: "JetBrainsMonoBold", sans-serif;
   font-size: 32px;
-  margin-top: 18px;
-  margin-left: 9px;
-  margin-right: 7px;
-  line-height: 1.5rem;
-  color: black;
-  flex-grow: 3;
-}
-.navbar-list-point{
-  color: black;
-  margin: 24px 43px;
+  padding: 18px 7px 13px 13px;
+  
 }
 
+hr {
+  border: 1px solid black;
+}
+
+.logo:after {
+  content: '';
+  width: 0;
+  height: 100%;
+  position: absolute;
+  border: 1px solid black;
+  top: 0;
+}
+
+.navbar {
+}
+.navbar > ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar-list-point {
+  
+}
+
+.exercises-list {
+  column-count: 2;
+  column-gap: 30px;
+  column-width: 460px;
+  margin-top: 0px;
+}
+
+.main-header-of-day {
+  text-align: center;
+  column-span: all;
+}
+
+.program-training {
+  text-align: center;
+  column-span: all;
+}
+.description-training {
+  text-align: center;
+  column-span: all;
+}
+
+.list-of-exercises {
+  break-inside: avoid;
+}
